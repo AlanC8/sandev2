@@ -1,0 +1,416 @@
+[
+  {
+    "image": "https://qazaqrepublic.com/uploads/thumbs/republic-red-2-1240cd19f6-dcd1e0612abd89e56ac0bc2e960b4d44.jpeg",
+    "name": "ФУТБОЛКА REPUBLIC ҚЫЗЫЛ",
+    "price": "9000₸",
+    "label": "жаңа"
+  },
+  {
+    "image": "https://qazaqrepublic.com/uploads/thumbs/fw23-web-makets-vest-green-b26fffcbf3-cfbcbe86d3b0c47284ea9b5e9d5d50f0.jpeg",
+    "name": "ЖИЛЕТ ЖАСЫЛ",
+    "price": "7500₸15000₸",
+    "label": "Жеңілдік"
+  },
+  {
+    "image": "https://qazaqrepublic.com/uploads/thumbs/est1465-purple-2-d20083a0dd-17cffcb45e706d02078d954aec3bdd22.jpeg",
+    "name": "ФУТБОЛКА EST.1465 КҮЛГІН",
+    "price": "9000₸",
+    "label": "жаңа"
+  },
+  {
+    "image": "https://qazaqrepublic.com/uploads/thumbs/dscf5262-1-4be715f429-5794c5b11a22c74222e5e237023acbf1.jpeg",
+    "name": "Тубус",
+    "price": "500₸",
+    "label": ""
+  },
+  {
+    "image": "https://qazaqrepublic.com/uploads/thumbs/omir-ozen-lime-2-709b94ab23-f4d9c51b030d3bc130df819b8cd32296.jpeg",
+    "name": "ФУТБОЛКА ÖMIR ÖZEN ЛАЙМ",
+    "price": "10000₸",
+    "label": "жаңа"
+  },
+  {
+    "image": "https://qazaqrepublic.com/uploads/thumbs/omir-ozen-white-2-6f6d657f9b-df1c333eeb805095fc93143ec3d6d0fc.jpeg",
+    "name": "ФУТБОЛКА ÖMIR ÖZEN АҚ",
+    "price": "10000₸",
+    "label": "жаңа"
+  },
+  {
+    "image": "https://qazaqrepublic.com/uploads/thumbs/omir-ozen-purple-2-47bbdf2c70-b48c1d31354637074db125f5b79fe758.jpeg",
+    "name": "ФУТБОЛКА ÖMIR ÖZEN КҮЛГІН",
+    "price": "10000₸",
+    "label": "жаңа"
+  },
+  {
+    "image": "https://qazaqrepublic.com/uploads/thumbs/est1465-white-2-34dfb74696-721a187c6116f610bfe370cbffb9827e.jpeg",
+    "name": "ФУТБОЛКА EST.1465 АҚ",
+    "price": "9000₸",
+    "label": "жаңа"
+  },
+  {
+    "image": "https://qazaqrepublic.com/uploads/thumbs/est1465-purple-2-18c57ff954-17cffcb45e706d02078d954aec3bdd22.jpeg",
+    "name": "ФУТБОЛКА EST.1465 КҮЛГІН",
+    "price": "9000₸",
+    "label": "жаңа"
+  },
+  {
+    "image": "https://qazaqrepublic.com/uploads/thumbs/est1465-green-2-5d5a28110d-6c179827390542ee57ac8b64cf319b80.jpeg",
+    "name": "ФУТБОЛКА EST.1465 ЖАСЫЛ",
+    "price": "9000₸",
+    "label": "жаңа"
+  },
+  {
+    "image": "https://qazaqrepublic.com/uploads/thumbs/jaqsy-kunder-white-2-c84c1ebc81-4d826564441b9b6e3bfd14d09ae34c9e.jpeg",
+    "name": "ФУТБОЛКА JAQSY KÜNDER АҚ",
+    "price": "10000₸",
+    "label": "жаңа"
+  },
+  {
+    "image": "https://qazaqrepublic.com/uploads/thumbs/jaqsy-kunder-purple-2-a5d454a3a7-ede5a8dc9be58ec2099d7aa8422c13e3.jpeg",
+    "name": "ФУТБОЛКА JAQSY KÜNDER КҮЛГІН",
+    "price": "10000₸",
+    "label": "жаңа"
+  },
+  {
+    "image": "https://qazaqrepublic.com/uploads/thumbs/women-fit-white-ac3bdb8e65-0b23d5406a6909db776f4ffb9d880c40.jpeg",
+    "name": "ФУТБОЛКА WOMEN FIT АҚ",
+    "price": "9000₸",
+    "label": "жаңа"
+  },
+  {
+    "image": "https://qazaqrepublic.com/uploads/thumbs/women-fit-blue-530d0dcaf1-088b757f7c12211aa8eb231fd682c0bb.jpeg",
+    "name": "ФУТБОЛКА WOMEN FIT ҚОЮ КӨК",
+    "price": "9000₸",
+    "label": "жаңа"
+  },
+  {
+    "image": "https://qazaqrepublic.com/uploads/thumbs/women-fit-green-bb136de5a9-210e7491affb567faec81c14aac01347.jpeg",
+    "name": "ФУТБОЛКА WOMEN FIT ЖАСЫЛ",
+    "price": "9000₸",
+    "label": "жаңа"
+  },
+  {
+    "image": "https://qazaqrepublic.com/uploads/thumbs/pigment-dyi-yellow-07a95d5752-472e777b5065646516e9b97274f15abf.jpeg",
+    "name": "ФУТБОЛКА PIGMENT DYED САРЫ",
+    "price": "13000₸",
+    "label": "жаңа"
+  },
+  {
+    "image": "https://qazaqrepublic.com/uploads/thumbs/pigment-dyi-pink-1d5914656a-cb0101a896548be54ae6cb8d73c62751.jpeg",
+    "name": "ФУТБОЛКА PIGMENT DYED ҚЫЗЫЛ",
+    "price": "13000₸",
+    "label": "жаңа"
+  },
+  {
+    "image": "https://qazaqrepublic.com/uploads/thumbs/pigment-dyi-blue-8590642db1-ce784cbd070e9f1ae4310266bd180038.jpeg",
+    "name": "ФУТБОЛКА PIGMENT DYED ЦЕМЕНТ",
+    "price": "13000₸",
+    "label": "жаңа"
+  },
+  {
+    "image": "https://qazaqrepublic.com/uploads/thumbs/pigment-dyi-grey-10f75e8235-36ce00989ae536c816e8e5177dbe9358.jpeg",
+    "name": "ФУТБОЛКА PIGMENT DYED СҰР",
+    "price": "13000₸",
+    "label": "жаңа"
+  },
+  {
+    "image": "https://qazaqrepublic.com/uploads/thumbs/club-t-shirt-red-2-a662eda3da-ad4331d0a36916273d233df7acdc1038.jpeg",
+    "name": "ФУТБОЛКА CLUB ҚЫЗЫЛ",
+    "price": "16000₸",
+    "label": "жаңа"
+  },
+  {
+    "image": "https://qazaqrepublic.com/uploads/thumbs/club-t-shirt-grey-blue-2-1768d38853-06b12eca8618fd0af027a87d90f7c791.jpeg",
+    "name": "ФУТБОЛКА CLUB СҰР",
+    "price": "16000₸",
+    "label": "аз қалды"
+  },
+  {
+    "image": "https://qazaqrepublic.com/uploads/thumbs/club-t-shirt-blue-2-c0663d1e82-eff6e1b1e43c4b011d7645f69c802571.jpeg",
+    "name": "ФУТБОЛКА CLUB КӨК",
+    "price": "16000₸",
+    "label": "жаңа"
+  },
+  {
+    "image": "https://qazaqrepublic.com/uploads/thumbs/tee-polo-white-2fbb773a09-785e229cf308078d491e41a6708376b6.jpeg",
+    "name": "ФУТБОЛКА POLO АҚ",
+    "price": "14000₸",
+    "label": "жаңа"
+  },
+  {
+    "image": "https://qazaqrepublic.com/uploads/thumbs/tee-polo-blue-9b689109bb-db6a4b9774ef5485a03314d2130d3b58.jpeg",
+    "name": "ФУТБОЛКА POLO ҚОЮ КӨК",
+    "price": "14000₸",
+    "label": "жаңа"
+  },
+  {
+    "image": "https://qazaqrepublic.com/uploads/thumbs/tee-polo-green-9ecba4b027-df76f8335f2d233dca30b96a3d994e89.jpeg",
+    "name": "ФУТБОЛКА POLO ЖАСЫЛ",
+    "price": "14000₸",
+    "label": "жаңа"
+  },
+  {
+    "image": "https://qazaqrepublic.com/uploads/thumbs/duisenbi-white-2-04e632e0ae-dafcc50256b632288a0137dee6806b4f.jpeg",
+    "name": "ФУТБОЛКА DUISENBI АҚ",
+    "price": "10000₸",
+    "label": "жаңа"
+  },
+  {
+    "image": "https://qazaqrepublic.com/uploads/thumbs/duisenbi-purple-2-78c9fb0f24-36e621ffe1dd671ab590b05122e3afbb.jpeg",
+    "name": "ФУТБОЛКА DUISENBI КҮЛГІН",
+    "price": "10000₸",
+    "label": "жаңа"
+  },
+  {
+    "image": "https://qazaqrepublic.com/uploads/thumbs/kop-soz-black-back-2-cce232a2af-10b6473d6306513b3c9ef36976bd04c5.jpeg",
+    "name": "ФУТБОЛКА KÖP SÖZ ҚАРА",
+    "price": "10000₸",
+    "label": "жаңа"
+  },
+  {
+    "image": "https://qazaqrepublic.com/uploads/thumbs/republic-white-2-56a7cd440b-2ba9362543b36730c55d640e06ced528.jpeg",
+    "name": "ФУТБОЛКА REPUBLIC АҚ",
+    "price": "9000₸",
+    "label": "жаңа"
+  },
+  {
+    "image": "https://qazaqrepublic.com/uploads/thumbs/republic-lime-2-171b2acbc0-b27cfe5116f6ff9a4b5de029d3f51ec5.jpeg",
+    "name": "ФУТБОЛКА REPUBLIC ЛАЙМ",
+    "price": "9000₸",
+    "label": "жаңа"
+  },
+  {
+    "image": "https://qazaqrepublic.com/uploads/thumbs/republic-red-2-4af9a8b582-dcd1e0612abd89e56ac0bc2e960b4d44.jpeg",
+    "name": "ФУТБОЛКА REPUBLIC ҚЫЗЫЛ",
+    "price": "9000₸",
+    "label": "жаңа"
+  },
+  {
+    "image": "https://qazaqrepublic.com/uploads/thumbs/republic-blue-2-21319bfce8-5ad6e40621beb2d3beab95e0ed9474f3.jpeg",
+    "name": "ФУТБОЛКА REPUBLIC ҚОЮ КӨК",
+    "price": "9000₸",
+    "label": "жаңа"
+  },
+  {
+    "image": "https://qazaqrepublic.com/uploads/thumbs/society-white-back-2-610d795070-8cf701842b1a00962b1f3f73636fd527.jpeg",
+    "name": "ФУТБОЛКА SOCIETY АҚ",
+    "price": "10000₸",
+    "label": "жаңа"
+  },
+  {
+    "image": "https://qazaqrepublic.com/uploads/thumbs/society-black-back-2-b419af6664-0cbce8aac1180cae6551c117694d8b49.jpeg",
+    "name": "ФУТБОЛКА SOCIETY ҚАРА",
+    "price": "10000₸",
+    "label": "жаңа"
+  },
+  {
+    "image": "https://qazaqrepublic.com/uploads/thumbs/senbi-club-2-72c1d0bb9c-e5a015fa848fd6d9d3815fa927887fa2.jpeg",
+    "name": "ФУТБОЛКА SENBI CLUB АҚ",
+    "price": "10000₸",
+    "label": "жаңа"
+  },
+  {
+    "image": "https://qazaqrepublic.com/uploads/thumbs/born-qazaq-green-2-609b0945e2-151f854b95a06236ddf54752142f3aac.jpeg",
+    "name": "ФУТБОЛКА BORN QAZAQ ЖАСЫЛ",
+    "price": "10000₸",
+    "label": "жаңа"
+  },
+  {
+    "image": "https://qazaqrepublic.com/uploads/thumbs/born-qazaq-blue-2-90a6106d83-abf5e2b6acd45ecfe01543aeb296e607.jpeg",
+    "name": "ФУТБОЛКА BORN QAZAQ ҚОЮ КӨК",
+    "price": "10000₸",
+    "label": "жаңа"
+  },
+  {
+    "image": "https://qazaqrepublic.com/uploads/thumbs/waqr-white-2-93c96acaeb-e8e97b391dc48248ae8f39fadd22fe73.jpeg",
+    "name": "ФУТБОЛКА WRQ АҚ",
+    "price": "10000₸",
+    "label": "жаңа"
+  },
+  {
+    "image": "https://qazaqrepublic.com/uploads/thumbs/waqr-black-2-2c4c7973df-94fdb267b0bd1ab2240cbfd03559a9b8.jpeg",
+    "name": "ФУТБОЛКА WRQ ҚАРА",
+    "price": "10000₸",
+    "label": "жаңа"
+  },
+  {
+    "image": "https://qazaqrepublic.com/uploads/thumbs/t-shirt-zipp-grey-2-9fd3a84dc8-8993104189b6f9fd74c2a13e0dfd3cf5.jpeg",
+    "name": "СЫРМАЛЫ ФУТБОЛКА АҚ МЕЛАНЖ",
+    "price": "16000₸",
+    "label": "жаңа"
+  },
+  {
+    "image": "https://qazaqrepublic.com/uploads/thumbs/t-shirt-zipp-dark-2-2f600b051c-dcc1080788248ca4831dbe63f38a8709.jpeg",
+    "name": "СЫРМАЛЫ ФУТБОЛКА ҚОЮ СҰР МЕЛАНЖ",
+    "price": "16000₸",
+    "label": "жаңа"
+  },
+  {
+    "image": "https://qazaqrepublic.com/uploads/thumbs/fw23-web-makets-tee-qrd-white-4feff4f448-5081e4c92217dc9940be08ba57ce07b9.jpeg",
+    "name": "ФУТБОЛКА QRD АҚ",
+    "price": "9000₸",
+    "label": ""
+  },
+  {
+    "image": "https://qazaqrepublic.com/uploads/thumbs/fw23-web-makets-tee-qrd-sand-38fe1f5a04-5081e4c92217dc9940be08ba57ce07b9.jpeg",
+    "name": "ФУТБОЛКА QRD КҮЛ ТҮСТЕС",
+    "price": "9000₸",
+    "label": ""
+  },
+  {
+    "image": "https://qazaqrepublic.com/uploads/thumbs/fw23-web-makets-tee-qrd-blue-2e7f6a13bb-d223e98697a32d695270f4e44a69ab66.jpeg",
+    "name": "ФУТБОЛКА QRD ҚОЮ КӨК",
+    "price": "9000₸",
+    "label": ""
+  },
+  {
+    "image": "https://qazaqrepublic.com/uploads/thumbs/fw23-web-makets-tee-qrep-melange-378592c663-5081e4c92217dc9940be08ba57ce07b9.jpeg",
+    "name": "ФУТБОЛКА QREP СҰР МЕЛАНЖ",
+    "price": "7000₸10000₸",
+    "label": "Жеңілдік"
+  },
+  {
+    "image": "https://qazaqrepublic.com/uploads/thumbs/fw23-web-makets-tee-qrep-black-663f2e222a-5081e4c92217dc9940be08ba57ce07b9.jpeg",
+    "name": "ФУТБОЛКА QREP ҚАРА",
+    "price": "7000₸10000₸",
+    "label": "аз қалды"
+  },
+  {
+    "image": "https://qazaqrepublic.com/uploads/thumbs/fw23-web-makets-tee-jk-melange-a8d76fcd33-d223e98697a32d695270f4e44a69ab66.jpeg",
+    "name": "ФУТБОЛКА jaqsy künder СҰР МЕЛАНЖ",
+    "price": "7000₸10000₸",
+    "label": "аз қалды"
+  },
+  {
+    "image": "https://qazaqrepublic.com/uploads/thumbs/qr-red-2-9280e3cbee-35cbb9e1dbd76d707a0613288d3e41c8.jpeg",
+    "name": "ФУТБОЛКА QAZAQ REPUBLIC ҚЫЗЫЛ",
+    "price": "9000₸",
+    "label": "жаңа"
+  },
+  {
+    "image": "https://qazaqrepublic.com/uploads/thumbs/fw23-web-makets-tee-qrl-blue-e003e20731-8826d0eb38bce35b1c4d02a0f2a189e5.jpeg",
+    "name": "ФУТБОЛКА qazaq republic ЦЕМЕНТ",
+    "price": "9000₸",
+    "label": ""
+  },
+  {
+    "image": "https://qazaqrepublic.com/uploads/thumbs/tee-qrl-green-001d8fda2f-c37a6be68c4116836b3033275cf0efe8.jpeg",
+    "name": "ФУТБОЛКА QAZAQ REPUBLIC ЖАСЫЛ",
+    "price": "9000₸",
+    "label": "аз қалды"
+  },
+  {
+    "image": "https://qazaqrepublic.com/uploads/thumbs/fw23-web-makets-tee-qrl-orange-2d4c90a6fd-8826d0eb38bce35b1c4d02a0f2a189e5.jpeg",
+    "name": "ФУТБОЛКА qazaq republic ҚОЮ САРЫ",
+    "price": "9000₸",
+    "label": ""
+  },
+  {
+    "image": "https://qazaqrepublic.com/uploads/thumbs/fw23-web-makets-tee-qrl-black-3c6ea3545a-8826d0eb38bce35b1c4d02a0f2a189e5.jpeg",
+    "name": "ФУТБОЛКА QAZAQ REPUBLIC ҚАРА",
+    "price": "9000₸",
+    "label": ""
+  },
+  {
+    "image": "https://qazaqrepublic.com/uploads/thumbs/fw23-web-makets-tee-tree-melange-5d4264450b-0f43f8f4bf95f52b38f7b0afcdfd6c0a.jpeg",
+    "name": "ФУТБОЛКА TREE СҰР МЕЛАНЖ",
+    "price": "7000₸10000₸",
+    "label": "Жеңілдік"
+  },
+  {
+    "image": "https://qazaqrepublic.com/uploads/thumbs/fw23-web-makets-tee-sb-blue-4d75cf4e2b-0f43f8f4bf95f52b38f7b0afcdfd6c0a.jpeg",
+    "name": "ФУТБОЛКА BIKE ҚОЮ КӨК",
+    "price": "10000₸",
+    "label": ""
+  },
+  {
+    "image": "https://qazaqrepublic.com/uploads/thumbs/tee-est-basic-red-8530595aae-e11e6e4e1f6c71ae356828899f634573.jpeg",
+    "name": "ФУТБОЛКА EST.1465 ҚОЮ ҚЫЗЫЛ",
+    "price": "6300₸9000₸",
+    "label": "Жеңілдік"
+  },
+  {
+    "image": "https://qazaqrepublic.com/uploads/thumbs/tee-est-basic-black-3c447ee69d-e11e6e4e1f6c71ae356828899f634573.jpeg",
+    "name": "ФУТБОЛКА EST.1465 ҚАРА",
+    "price": "6300₸9000₸",
+    "label": "аз қалды"
+  },
+  {
+    "image": "https://qazaqrepublic.com/uploads/thumbs/tee-est-blue-2ec0dcbf62-ea5963cd-fbddef20af-49453bbfc3b7c96567dcb33976ba8973.jpeg",
+    "name": "ФУТБОЛКА EST.1465 ҚОЮ КӨК",
+    "price": "7000₸10000₸",
+    "label": "Жеңілдік"
+  },
+  {
+    "image": "https://qazaqrepublic.com/uploads/thumbs/tee-qrd-gray-e7b57bae6c-df76f8335f2d233dca30b96a3d994e89.jpeg",
+    "name": "ФУТБОЛКА QRD СҰР МЕЛАНЖ",
+    "price": "9000₸",
+    "label": ""
+  },
+  {
+    "image": "https://qazaqrepublic.com/uploads/thumbs/tee-qrd-blue-d7505fac84-35b856a5-163ff0ea44-807b12c1cda81f28eb34e3a5698073b0.jpeg",
+    "name": "ФУТБОЛКА QRD ҚОЮ КӨК",
+    "price": "6300₸9000₸",
+    "label": "аз қалды"
+  },
+  {
+    "image": "https://qazaqrepublic.com/uploads/thumbs/fw23-web-makets-tee-society-blue-36dd3ad2aa-0f43f8f4bf95f52b38f7b0afcdfd6c0a.jpeg",
+    "name": "ФУТБОЛКА society ҚОЮ КӨК",
+    "price": "9000₸",
+    "label": ""
+  },
+  {
+    "image": "https://qazaqrepublic.com/uploads/thumbs/tee-ms-red-9aae732307-7bdd7107905c8ec5c05aa6b029dc37ff.jpeg",
+    "name": "ФУТБОЛКА MODERN SOCIETY ҚОЮ ҚЫЗЫЛ",
+    "price": "6300₸9000₸",
+    "label": "Жеңілдік"
+  },
+  {
+    "image": "https://qazaqrepublic.com/uploads/thumbs/tee-bq-black-6e1dd6e278-e11e6e4e1f6c71ae356828899f634573.jpeg",
+    "name": "ФУТБОЛКА BORN QAZAQ ҚАРА",
+    "price": "7000₸10000₸",
+    "label": "аз қалды"
+  },
+  {
+    "image": "https://qazaqrepublic.com/uploads/thumbs/tee-bjb-green-397b03ca52-e5e6e80-47a136f325-5e91259777d81bb79e0aad94afa82671.jpeg",
+    "name": "ФУТБОЛКА BJB ЖАСЫЛ",
+    "price": "7000₸10000₸",
+    "label": "аз қалды"
+  },
+  {
+    "image": "https://qazaqrepublic.com/uploads/thumbs/fw23-web-makets-91-tee-white-f879fc505a-e4e3f7eaeaeaf9058b538704dad8d767.jpeg",
+    "name": "ФУТБОЛКА qr × 91 ART АҚ",
+    "price": "11000₸",
+    "label": "аз қалды"
+  },
+  {
+    "image": "https://qazaqrepublic.com/uploads/thumbs/fw23-web-makets-91-tee-blue-1c0835c69e-e4e3f7eaeaeaf9058b538704dad8d767.jpeg",
+    "name": "ФУТБОЛКА qr × 91 КӨК",
+    "price": "10000₸",
+    "label": "аз қалды"
+  },
+  {
+    "image": "https://qazaqrepublic.com/uploads/thumbs/fw23-web-makets-ls-ms-white-dbc6ecd157-ef4991bbf1a90803aa847b73c02610e8.jpeg",
+    "name": "ұзынжең modern society АҚ",
+    "price": "12000₸",
+    "label": ""
+  },
+  {
+    "image": "https://qazaqrepublic.com/uploads/thumbs/fw23-web-makets-ls-ms-sand-6e1d5a49ab-ccd26392a39d098a2114b75092498ad0.jpeg",
+    "name": "ұзынжең modern society КҮЛ ТҮСТЕС",
+    "price": "12000₸",
+    "label": ""
+  },
+  {
+    "image": "https://qazaqrepublic.com/uploads/thumbs/fw23-web-makets-ls-ms-blue-3af7d55cc9-ccd26392a39d098a2114b75092498ad0.jpeg",
+    "name": "ұзынжең modern society ҚОЮ КӨК",
+    "price": "12000₸",
+    "label": ""
+  },
+  {
+    "image": "https://qazaqrepublic.com/uploads/thumbs/fw23-web-makets-ls-ms-black-87fd895219-ccd26392a39d098a2114b75092498ad0.jpeg",
+    "name": "ұзынжең modern society ҚАРА",
+    "price": "12000₸",
+    "label": ""
+  }
+]

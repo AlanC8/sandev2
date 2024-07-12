@@ -1,0 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Sniglet:wght@400;800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
+.sniglet-font {
+  font-family: "Sniglet", sans-serif;
+}
+.comfort{
+    font-family: "Comfortaa", sans-serif;
+}
