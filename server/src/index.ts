@@ -4,9 +4,8 @@ import connectDB from "./db";
 import globalRouter from "./global-router";
 import { logger } from "./logger";
 import cors from "cors";
-import cron from "node-cron";
-import { Pinecone } from "@pinecone-database/pinecone";
 import axios from "axios";
+
 const app = express();
 const PORT = process.env.PORT || 3000;
 
@@ -15,10 +14,6 @@ app.use(cors());
 app.use(logger);
 app.use(express.json());
 app.use("/api/v1/", globalRouter);
-
-export const pc = new Pinecone({
-  apiKey: process.env.PINECONE_API_KEY as string,
-});
 
 app.get("/fetch-image", async (req, res) => {
   const { url } = req.query;
@@ -37,10 +32,6 @@ app.get("/fetch-image", async (req, res) => {
   }
 });
 
-// zaraLangchain()
-// getZaraDress()
-// pinterestPins("cats")
-// getOutfit()
 app.listen(PORT, () => {
   console.log(`Server runs at http://localhost:${PORT}`);
 });

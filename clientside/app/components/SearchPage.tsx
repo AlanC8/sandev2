@@ -26,6 +26,8 @@ const SearchPage: React.FC<SearchPageProps> = ({ setClothing, setOpen }) => {
   const [zara, setZara] = useState(false);
   const [items, setItems] = useState<Item[]>([]);
   const [zaraItems, setZaraItems] = useState<Item[]>([]);
+  const [query, setQuery] = useState("");
+
   const getMagaz = async (magaz: string) => {
     try {
       const response = await axios.post("http://localhost:3001/api/v1/magaz", {
@@ -49,11 +51,9 @@ const SearchPage: React.FC<SearchPageProps> = ({ setClothing, setOpen }) => {
     data.forEach((category) => {
       (Object.keys(category) as (keyof Category)[]).forEach((key) => {
         if (
-          key === "headwear" ||
           key === "bottom" ||
           key === "shirt" ||
           key === "tshirts" ||
-          key === "shirt" ||
           key === "sweatshirts"
         ) {
           if (category[key]) {
@@ -73,8 +73,8 @@ const SearchPage: React.FC<SearchPageProps> = ({ setClothing, setOpen }) => {
   const handleClickRep = async (item: Item) => {
     try {
       console.log("Fetching image:", item.image);
-      const proxyUrl = "https://cors-anywhere.herokuapp.com/";
-      const response = await fetch(proxyUrl + item.image);
+      const proxyUrl = `http://localhost:3001/fetch-image?url=${encodeURIComponent(item.image)}`;
+      const response = await fetch(proxyUrl);
       if (!response.ok) {
         throw new Error("Network response was not ok");
       }
@@ -103,11 +103,9 @@ const SearchPage: React.FC<SearchPageProps> = ({ setClothing, setOpen }) => {
     }
   };
 
-  const [query, setQuery] = useState("");
-
-  const filteredItems = items.filter((item) => {
-    return item.name.toLowerCase().includes(query.toLowerCase());
-  });
+  const filteredItems = items.filter((item) =>
+    item.name.toLowerCase().includes(query.toLowerCase())
+  );
 
   const filtered = query === "" ? items : filteredItems;
 
@@ -207,7 +205,9 @@ const SearchPage: React.FC<SearchPageProps> = ({ setClothing, setOpen }) => {
               />
               <div className="p-4">
                 <h3 className="text-lg font-semibold">{item.name}</h3>
-                <p className="text-gray-700">{+item.price.split('₸')[0]/100}</p>
+                <p className="text-gray-700">
+                  {+item.price.split("₸")[0] / 100}
+                </p>
                 {item.label && (
                   <span className="inline-block px-2 py-1 mt-2 text-xs font-medium text-white bg-green-500 rounded-full">
                     {item.label}
@@ -236,8 +236,8 @@ const SearchPage: React.FC<SearchPageProps> = ({ setClothing, setOpen }) => {
           </h1>
         </div>
         <hr />
-        <div className="px-14 grid grid-cols-3 gap-6">
-          <div className="w-[320px] h-[160px] cursor-pointer mt-10">
+        <div className="px-4 sm:px-8 md:px-14 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          <div className="w-full h-[160px] cursor-pointer mt-10">
             <img
               onClick={() => {
                 setQrep(true);
@@ -246,7 +246,7 @@ const SearchPage: React.FC<SearchPageProps> = ({ setClothing, setOpen }) => {
               className="object-cover rounded w-full h-full"
             />
           </div>
-          <div className="w-[320px] h-[160px] cursor-pointer mt-10">
+          <div className="w-full h-[160px] cursor-pointer mt-10">
             <img
               onClick={() => {
                 setZara(true);

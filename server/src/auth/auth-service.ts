@@ -25,6 +25,21 @@ class AuthService {
     return newUser;
   }
 
+  async registerUserV2(createUserDto: CreateUserDto): Promise<IUser> {
+    const { email, password, username, userImage } = createUserDto;
+    const hashedPassword = await bcrypt.hash(password, 10);
+
+    const newUser = new UserModel({
+      email,
+      username,
+      password: hashedPassword,
+      userImage,
+    });
+
+    await newUser.save();
+    return newUser;
+  }
+
   async loginUser(email: string, password: string): Promise<{ user: IUser, accessToken: string, refreshToken: string } | null> {
     const user = await UserModel.findOne({ email });
     if (!user) return null;
@@ -42,7 +57,7 @@ class AuthService {
   }
 
   private generateJwt(user: IUser): string {
-    return jwt.sign({ id: user._id, email: user.email }, this.jwtSecret, { expiresIn: '1h' });
+    return jwt.sign({ id: user._id, email: user.email }, this.jwtSecret, { expiresIn: '7d' });
   }
 
   private generateRefreshToken(user: IUser): string {

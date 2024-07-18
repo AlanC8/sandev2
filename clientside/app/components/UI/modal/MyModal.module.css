@@ -7,6 +7,7 @@
   display: none;
   background: rgba(0, 0, 0, 0.5);
   overflow: hidden; /* Ensure overflow is hidden */
+  z-index: 1000; /* Ensure the modal is on top of other elements */
 }
 
 .myModalContent {
@@ -14,8 +15,9 @@
   background-color: white;
   border-radius: 16px;
   min-width: 250px;
+  max-width: 90vw; /* Ensure content does not exceed viewport width */
   max-height: 80vh; /* Max height to make the content scrollable */
-  overflow-y: hidden; /* Make content scrollable if it exceeds max height */
+  overflow-y: auto; /* Make content scrollable if it exceeds max height */
 }
 
 .myModal.active {

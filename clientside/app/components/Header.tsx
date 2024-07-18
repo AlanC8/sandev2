@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   Dialog,
   DialogPanel,
@@ -27,7 +27,10 @@ import {
   PlayCircleIcon,
 } from "@heroicons/react/20/solid";
 import { Button } from "@/components/ui/button";
+import { UserService } from "../services/UserServices";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { DropdownMenus } from "./Dropdown";
 
 const products = [
   {
@@ -66,9 +69,37 @@ const callsToAction = [
   { name: "Watch demo", href: "#", icon: PlayCircleIcon },
   { name: "Contact sales", href: "#", icon: PhoneIcon },
 ];
+interface User {
+  _id: string;
+  email: string;
+  username: string;
+  password: string;
+  userImage: string;
+  __v: number;
+}
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [user, setUser] = useState<User>();
+  const [loading, setLoading] = useState(true);
+
+  const router = useRouter();
+
+  const authMe = async () => {
+    try {
+      const response = await UserService.getUser();
+      if (response && response.status === 200) {
+        setUser(response.data);
+        setLoading(false);
+      }
+    } catch (error) {
+      console.log("User not authenticated");
+    }
+  };
+
+  useEffect(() => {
+    authMe();
+  }, []);
 
   return (
     <header className="bg-white">
@@ -156,14 +187,22 @@ export default function Header() {
           </a>
         </PopoverGroup>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:space-x-4 lg:items-center">
-          <Link href={'/login'}>
-            <p className="text-sm font-medium leading-6 ">
-              Войти
-            </p>
-          </Link>
-          <Button className="bg-[#254D32] font-semibold hover:bg-[#254D32]">
-            Начать
-          </Button>
+          {loading ? (
+            <>
+              <Link href={"/login"}>
+                <p className="text-sm font-medium leading-6 ">Войти</p>
+              </Link>
+              <Button onClick={() => {
+                router.push("/register")
+              }} className="bg-[#254D32] font-semibold hover:bg-[#254D32]">
+                Начать
+              </Button>
+            </>
+          ) : (
+            <DropdownMenus>
+              {user?.username as string}
+            </DropdownMenus>
+          )}
         </div>
       </nav>
       <Dialog

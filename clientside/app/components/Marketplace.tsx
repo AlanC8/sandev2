@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import MyLoader from "./Skeleton";
 import axios from "axios";
 import { v4 as uuidv4 } from "uuid";
+
 interface SearchPageProps {
   setClothing: (clothing: File) => void;
   setOpen: (open: boolean) => void;
@@ -29,9 +30,7 @@ const Marketplace: React.FC<SearchPageProps> = ({ setClothing, setOpen }) => {
 
   const handleClick = async (url: string) => {
     try {
-      const proxyUrl = `http://localhost:3001/fetch-image?url=${encodeURIComponent(
-        url
-      )}`;
+      const proxyUrl = `http://localhost:3001/fetch-image?url=${encodeURIComponent(url)}`;
       console.log(proxyUrl);
 
       const response = await fetch(proxyUrl);
@@ -113,7 +112,6 @@ const Marketplace: React.FC<SearchPageProps> = ({ setClothing, setOpen }) => {
                 <img
                   src={image}
                   className="object-cover w-full h-48"
-                  alt={`image-${index}`}
                 />
               </div>
             ))
@@ -138,10 +136,10 @@ const Marketplace: React.FC<SearchPageProps> = ({ setClothing, setOpen }) => {
           </h1>
         </div>
         <hr />
-        <div className="px-14 grid grid-cols-3 gap-6">
+        <div className="px-4 sm:px-8 md:px-14 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           <div
             onClick={() => setMarketplace(true)}
-            className="w-[320px] h-[160px] cursor-pointer mt-10"
+            className="w-full h-[160px] cursor-pointer mt-10"
           >
             <img
               src="/5f98f943e0742145161288.png"

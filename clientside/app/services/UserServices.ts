@@ -9,16 +9,23 @@ export class UserService {
     });
     return response;
   }
-  static async register(username: string, email: string, password: string) {
-    const response = await apiClient.post("api/v1/register", {
-      username: username,
-      password: password,
-      email: email,
+  static async register(formData: FormData) {
+    const response = await apiClient.post("api/v1/registerv2", formData, {
+      headers: {
+        'Content-Type': 'multipart/form-data'
+      }
     });
     return response;
   }
-  static async getUser(){
-    const response = apiClient.get("/api/v1/auth/me");
+  static async getUser() {
+    const response = await apiClient.get("/api/v1/auth/me");
     return response;
+  }
+  static async vtonLogo(imageLink: string, category: string) {
+    const response = await apiClient.post('/api/v1/vton-extension', {
+      imageLink: imageLink,
+      category: category
+    })
+    return response
   }
 }

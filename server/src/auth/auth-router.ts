@@ -2,14 +2,18 @@ import { Router } from "express";
 import authMiddleware from "../middlewares/auth-middleware";
 import AuthController from "./auth-controller";
 import AuthService from "./auth-service";
-import { User } from "./types/response";
 
 const authRouter = Router();
+const multer = require('multer');
+const storage = multer.memoryStorage();
+const upload = multer({ storage });
+const uploadMiddleware = upload.single('userImage');
 
 const authService = new AuthService();
 const authController = new AuthController(authService);
 
-authRouter.post("/register", authController.registerUser);
+authRouter.post("/register" , authController.registerUser);
+authRouter.post("/registerv2", uploadMiddleware , authController.registerUserV2);
 authRouter.post("/login", authController.loginUser);
 authRouter.post("/refresh-token", authController.refreshToken);
 
@@ -31,8 +35,6 @@ authRouter.get("/auth/me", authMiddleware, async (req, res) => {
   }
 });
 
-
-// Example protected route
 authRouter.get("/protected", authMiddleware, (req, res) => {
   res.json({ message: "You have access to this route!" });
 });

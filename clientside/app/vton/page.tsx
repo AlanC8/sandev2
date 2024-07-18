@@ -6,6 +6,7 @@ import axios from "axios";
 import { saveAs } from "file-saver";
 import "./vtonstyle.css";
 import Marketplace from "../components/Marketplace";
+import { UserService } from "../services/UserServices";
 
 const TryOnInterface: React.FC = () => {
   const [avatar, setAvatar] = useState<File | null>(null);
@@ -15,7 +16,6 @@ const TryOnInterface: React.FC = () => {
   const [visible, setVisible] = useState(false);
   const [loading, setLoading] = useState(false);
   const [category, setCategory] = useState<string>("upper_body");
-  const [marketplace, setMarketPlace] = useState(false);
   const [visibleZara, setVisibleZara] = useState(false);
 
   const handleAvatarUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -25,12 +25,43 @@ const TryOnInterface: React.FC = () => {
     }
   };
 
-  useEffect(() => {
-    fetch("/KakaoTalk_Photo_2024-04-04-21-44-45.png")
-      .then((res) => res.blob())
-      .then((blob) => {
+  const getUserAvatar = async () => {
+    try {
+      const response = await UserService.getUser();
+
+      if (response && response.data) {
+        const avatarUrl = response.data.userImage;
+        const res = await fetch(avatarUrl);
+        const blob = await res.blob();
         setAvatar(new File([blob], "avatar.jpg", { type: blob.type }));
-      });
+      } else {
+        fetch("/KakaoTalk_Photo_2024-04-04-21-44-45.png")
+          .then((res) => res.blob())
+          .then((blob) => {
+            setAvatar(new File([blob], "avatar.jpg", { type: blob.type }));
+          });
+      }
+    } catch (error) {
+      console.error("Ошибка при получении аватарки пользователя:", error);
+      fetch("/KakaoTalk_Photo_2024-04-04-21-44-45.png")
+        .then((res) => res.blob())
+        .then((blob) => {
+          setAvatar(new File([blob], "avatar.jpg", { type: blob.type }));
+        });
+    }
+  };
+
+  useEffect(() => {
+    const accessToken = localStorage.getItem("accessToken");
+    if (!accessToken) {
+      getUserAvatar();
+    } else {
+      fetch("/KakaoTalk_Photo_2024-04-04-21-44-45.png")
+        .then((res) => res.blob())
+        .then((blob) => {
+          setAvatar(new File([blob], "avatar.jpg", { type: blob.type }));
+        });
+    }
 
     fetch("/sweater.webp")
       .then((res) => res.blob())
@@ -40,7 +71,6 @@ const TryOnInterface: React.FC = () => {
 
     setResult("/output.jpg");
   }, []);
-  console.log(avatar, clothing, result);
 
   const handleClothingUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
@@ -60,6 +90,7 @@ const TryOnInterface: React.FC = () => {
       axios
         .post("http://localhost:3001/api/v1/vton", formData, {
           headers: {
+            'Authorization': `Bearer ${localStorage.getItem("access")}`,
             "Content-Type": "multipart/form-data",
           },
         })
@@ -115,10 +146,12 @@ const TryOnInterface: React.FC = () => {
   };
 
   return (
-    <div className="w-[80%] mx-auto">
-      <div className="pb-4 pt-6 flex justify-between items-center">
-        <h1 className="text-2xl font-bold">Примерить одежду в сайте</h1>
-        <div className="flex">
+    <div className="w-[90%] mx-auto lg:w-[80%]">
+      <div className="pb-4 pt-6 flex flex-col lg:flex-row justify-between items-center">
+        <h1 className="text-2xl font-bold text-center lg:text-left">
+          Примерить одежду в сайте
+        </h1>
+        <div className="flex mt-4 lg:mt-0">
           <button
             className={`py-2 px-4 rounded-l ${
               active === "stores"
@@ -149,7 +182,7 @@ const TryOnInterface: React.FC = () => {
       </div>
       <hr />
       <div className="grid grid-cols-12 gap-4 p-8 text-[#254D32]">
-        <div className="col-span-6">
+        <div className="col-span-12 lg:col-span-6">
           <div className="flex flex-col space-y-10">
             {/* First Cell: My Picture */}
             <div className="p-4">
@@ -254,17 +287,17 @@ const TryOnInterface: React.FC = () => {
         </div>
 
         {/* Vertical Divider */}
-        <div className="col-span-1 flex justify-center">
-          <div className="h-full border-l-2 border-gray-300 mx-2"></div>
+        <div className="col-span-12 lg:col-span-1 flex justify-center">
+          <div className="h-full border-t-2 lg:border-t-0 lg:border-l-2 border-gray-300 mx-2"></div>
         </div>
 
         {/* Third Cell: Result */}
-        <div className="col-span-5 p-4">
+        <div className="col-span-12 lg:col-span-5 p-4">
           <h2 className="text-3xl mb-4 font-bold">Результат</h2>
           <div className="border-dashed border-2 rounded min-h-[200px] border-gray-300 p-4 text-center">
             {loading ? (
               <div className="flex justify-center items-center min-h-[450px]">
-                <div className="loader">Загрузка...</div>
+                <div className="loader"></div>
               </div>
             ) : result ? (
               <div className="flex flex-col items-center">
@@ -289,11 +322,11 @@ const TryOnInterface: React.FC = () => {
         <div className="col-span-12 mt-8">
           <hr />
           <h2 className="text-3xl mt-10 mb-6 font-bold">Примеры</h2>
-          <div className="grid grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {exampleImages.map((example, index) => (
               <div
                 key={index}
-                className="h-64 w-64 border border-gray-300 rounded cursor-pointer"
+                className="h-64 w-full md:w-64 border border-gray-300 rounded cursor-pointer"
                 onClick={() => handleExampleClick(example)}
               >
                 <img
@@ -313,7 +346,7 @@ const TryOnInterface: React.FC = () => {
       )}
       {visibleZara && (
         <MyModal visible={visibleZara} setVisible={setVisibleZara}>
-          <Marketplace setClothing={setClothing} setOpen={setVisibleZara}/>
+          <Marketplace setClothing={setClothing} setOpen={setVisibleZara} />
         </MyModal>
       )}
     </div>

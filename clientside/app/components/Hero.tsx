@@ -1,7 +1,6 @@
 "use client";
 import Link from "next/link";
 import React, { useEffect } from "react";
-import "tailwindcss/tailwind.css";
 
 const Hero: React.FC = () => {
   useEffect(() => {
@@ -21,7 +20,7 @@ const Hero: React.FC = () => {
 
   return (
     <div className="relative w-full h-screen bg-[#254D32] overflow-hidden">
-      <div className="relative z-10 flex flex-col items-center justify-start h-full pt-20 md:pt-32">
+      <div className="relative z-1 flex flex-col items-center justify-start h-full pt-20 md:pt-32">
         <h1 className="text-5xl md:text-6xl font-bold text-white text-center">
           Виртуальная примерка в <br /> реальном времени
         </h1>
@@ -45,7 +44,6 @@ const Hero: React.FC = () => {
             <img
               key={index}
               src={src}
-              alt={`Scrolling ${index}`}
               className="h-[312.5px] w-[250px] object-cover mx-[32px]"
             />
           ))}

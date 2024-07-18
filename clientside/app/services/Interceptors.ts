@@ -9,7 +9,6 @@ apiClient.interceptors.request.use(
         const authToken = localStorage.getItem("access");
         if (authToken) {
             config.headers.Authorization = `Bearer ${authToken}`;
-            console.log("Authorization header set:", config.headers.Authorization);
         } else {
             console.warn("No auth token found in localStorage");
         }

@@ -9,7 +9,7 @@ import sweatshirts from "../uploads/sweatshirts.json";
 import tshirts from "../uploads/t-shirts.json";
 import OutFitGenerator from "./model";
 import authMiddleware from "../middlewares/auth-middleware";
-import zara_dresses from '../../zara_dresses.json'
+import zara_dresses from "../../zara_dresses.json";
 import { User } from "../auth/types/response";
 import { uploadMiddleware, utapi } from "../middlewares/upload-middleware";
 import { uuid } from "uuidv4";
@@ -130,7 +130,6 @@ generateOutfitRouter.post(
         } else {
           const imageUrl = fileResponse.data.url;
           const systemPrompt = `
-      SEND ME DATA AS EXAMPLE STRICTLY IN JSON FORMAT:
       You are an advanced AI fashion assistant with access to up-to-date clothing data from various categories.
       You will generate stylish and personalized outfit recommendations based on user requests.
       The data for each category is stored in JSON files. 
@@ -143,12 +142,14 @@ generateOutfitRouter.post(
       - "sweatshirts.json": ${JSON.stringify(sweatshirts)}
       - "headwear.json": ${JSON.stringify(headwear)}
       
-      Each JSON file contains a collection of items with the following attributes:
+      Each JSON file STRICTLY contains a collection of items with the following attributes:
       - "image": URL to the item's image
       - "name": Name of the item
       - "price": Price of the item
       - "label": Additional labels or descriptions
       
+      Headwear, topwear, and bottom strictly must not be empty.
+
       Based on this request, you will select appropriate items from the JSON files to create a complete outfit. Ensure the items complement each other in style, color, and occasion. Provide a description of the outfit along with the selected items' details.
       
       Example response which is a strictly JSON example object: 
@@ -214,6 +215,15 @@ generateOutfitRouter.post(
           const resJson = response.choices[0]?.message?.content;
           if (resJson) {
             const parsedRes = JSON.parse(resJson);
+            const outfit = new OutFitGenerator({
+              headwear: parsedRes.headwear,
+              topwear: parsedRes.topwear,
+              bottom: parsedRes.bottom,
+              title: parsedRes.topwear[0].name,
+              user: (req.user as User).id, // Assuming user information is available from auth middleware
+            });
+
+            await outfit.save();
             res.json(parsedRes);
           } else {
             res.status(400).json({ message: "No valid response from AI" });
@@ -244,6 +254,21 @@ generateOutfitRouter.get("/history", authMiddleware, async (req, res) => {
   try {
     const history = await OutFitGenerator.find({ user: (req.user as User).id });
     res.json(history);
+  } catch (error) {
+    res.status(500).json({ message: "An error occurred" });
+  }
+});
+
+generateOutfitRouter.get("/history/:id", authMiddleware, async (req, res) => {
+  try {
+    const outfit = await OutFitGenerator.findOne({
+      _id: req.params.id,
+      user: (req.user as User).id,
+    });
+    if (!outfit) {
+      return res.status(404).json({ message: "Outfit not found" });
+    }
+    res.json(outfit);
   } catch (error) {
     res.status(500).json({ message: "An error occurred" });
   }
@@ -300,8 +325,8 @@ const jsonHelperFunc = (magaz: string) => {
         label: item.colors,
       }));
     };
-    const transformedData = transformData(zara_dresses)
-    return { zara_dresses: transformedData.filter((_, i) => i < 60)};
+    const transformedData = transformData(zara_dresses);
+    return { zara_dresses: transformedData.filter((_, i) => i < 60) };
   }
 };
 
